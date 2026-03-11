@@ -1,37 +1,63 @@
+# Swiggy App
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>AAR DEMO | AWS CLOUD DEPLOYMENT</title>
-  <style>
-    body {
-      color: #000080;
-      background-color: #FFFFFF;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-    
-    h1 {
-      font-size: 500%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-    
-    h2 {
-      font-size: 200%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div align="center">
-    <img src="https://s3.ap-south-1.amazonaws.com/www.basava.com/aar_logo_final.png" style="max-width: 20%;">
-    <h1>Congratulations!!! </h1>
-      <h2>satish created a CI-CD AWS-Pipeline|Ganesh Nalli</h2>
-    <h3>This application was deployed using AWS CodeDeploy.</h3>
-    <p>For next steps, read the <a href="http://aws.amazon.com/documentation/codedeploy">AWS CodeDeploy Documentation</a>.</p>
-  </div>
+    <header>
+        <h1>Welcome to Swiggy</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order Now</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Your Favorite Food Delivered</h2>
+        <p>Order from the best restaurants in your area.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li>Pizza</li>
+            <li>Burgers</li>
+            <li>Sushi</li>
+            <li>Salads</li>
+        </ul>
+    </section>
+
+    <section id="order">
+        <h2>Order Now</h2>
+        <form action="submit_order.php" method="POST">
+            <label for="food-item">Select Food Item:</label>
+            <select id="food-item" name="food-item">
+                <option value="pizza">Pizza</option>
+                <option value="burger">Burger</option>
+                <option value="sushi">Sushi</option>
+                <option value="salad">Salad</option>
+            </select>
+            <button type="submit">Order</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@swiggy.com</p>
+        <p>Phone: +1 234 567 890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Swiggy. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
